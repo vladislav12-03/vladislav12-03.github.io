@@ -139,6 +139,10 @@ a:hover {
     gap: 2rem;
 }
 
+.is-hidden-tab {
+    display: none !important;
+}
+
 .nav-link {
     color: var(--text-secondary);
     font-weight: 500;
@@ -991,7 +995,7 @@ section {
 }
 
 .current-projects {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .project-plans {
