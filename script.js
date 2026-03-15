@@ -521,6 +521,14 @@ window.addEventListener('load', () => {
     }, 200);
 }); 
 
+// Мягкий редирект со старых .html URL на новые "чистые" пути
+(function redirectLegacyHtmlRoutes() {
+    const path = window.location.pathname || '';
+    if (path.endsWith('/socials.html')) {
+        window.location.replace(path.replace(/\/socials\.html$/, '/socials'));
+    }
+})();
+
 // Вычисление возраста кота
 (function setCatAge(){
     const ageEl = document.getElementById('cat-age');
