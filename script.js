@@ -524,8 +524,9 @@ window.addEventListener('load', () => {
 // Мягкий редирект со старых .html URL на новые "чистые" пути
 (function redirectLegacyHtmlRoutes() {
     const path = window.location.pathname || '';
+    // Если запрошен старый URL /socials.html, отправляем на /socials/
     if (path.endsWith('/socials.html')) {
-        window.location.replace(path.replace(/\/socials\.html$/, '/socials'));
+        window.location.replace(path.replace(/\/socials\.html$/, '/socials/'));
     }
 })();
 
