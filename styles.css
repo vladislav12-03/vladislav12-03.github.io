@@ -1863,7 +1863,7 @@ html {
 }
 
 /* Специальные стили для фотки кота с ноутбуком */
-.gallery-item img[src="image/IMG_3325.jpeg"] {
+.gallery-item img[src="images/IMG_3325.jpeg"] {
     width: 45%;
     height: auto;
     object-fit: cover;
