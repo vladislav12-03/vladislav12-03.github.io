@@ -1,3 +1,34 @@
+// Централизованные значения сайта (без хардкода в HTML)
+const SITE_DATA = {
+	nickname: 'Vladislav12.03',
+	siteName: '.VYteam.eu.org',
+	copyrightText: '\u00a9 2026 VYteam — by Vladislav'
+};
+
+function applyCommonSiteData() {
+	document.querySelectorAll('.nickname').forEach((el) => {
+		el.textContent = SITE_DATA.nickname;
+	});
+
+	document.querySelectorAll('.site-name').forEach((el) => {
+		el.textContent = SITE_DATA.siteName;
+	});
+
+	document.querySelectorAll('.copyright-text').forEach((el) => {
+		el.textContent = SITE_DATA.copyrightText;
+	});
+
+	const titleEl = document.querySelector('title[data-page-title]');
+	if (titleEl) {
+		const pageTitle = titleEl.getAttribute('data-page-title') || '';
+		titleEl.textContent = pageTitle
+			? `${pageTitle} - ${SITE_DATA.nickname}`
+			: SITE_DATA.nickname;
+	}
+}
+
+applyCommonSiteData();
+
 // Мобильное меню
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
